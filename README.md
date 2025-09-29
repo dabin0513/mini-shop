@@ -8,7 +8,8 @@ mini-shop은 기본적인 쇼핑몰 도메인(상품 관리, 주문, 알림)을 
 
 
 ## 🛠️ 기술 스택
-- **Backend**: Java 21, Spring Boot 3.5.6, Spring Data JPA
+- **Backend**: Java 21, Spring Boot 3.5.6, Spring Data JPA, Kafka
+- **Frontend**: [React + TypeScript](https://github.com/dabin0513/mini-shop-front) (피그마 메이커가 자동 생성한 코드)
 - **DB**: MySQL, Redis
 
 
