@@ -20,3 +20,4 @@ mini-shop은 기본적인 쇼핑몰 도메인(상품 관리, 주문, 알림)을 
 
 ## 📚 문서
 - [Use Cases](docs/use-case.md)
+- [ERD](https://www.erdcloud.com/d/WyFdqqTB8w4f9pQW6)
