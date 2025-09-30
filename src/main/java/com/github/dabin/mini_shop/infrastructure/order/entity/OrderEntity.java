@@ -1,4 +1,4 @@
-package com.github.dabin.mini_shop.infrastructure.repository;
+package com.github.dabin.mini_shop.infrastructure.order.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
