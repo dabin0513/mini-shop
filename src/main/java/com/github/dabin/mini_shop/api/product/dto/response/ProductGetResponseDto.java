@@ -1,4 +1,4 @@
-package com.github.dabin.mini_shop.domain.product.model;
+package com.github.dabin.mini_shop.api.product.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Product {
+public class ProductGetResponseDto {
     private Long id;
     private Long categoryId;
     private Long stockId;
@@ -22,12 +22,12 @@ public class Product {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public static Product of(
+    public static ProductGetResponseDto of(
             Long id, Long categoryId, Long stockId, String name,
             Long salePrice, Long listPrice, String imageUrl, String productStatus,
             int salesCount, LocalDateTime createdAt, LocalDateTime updatedAt
     ) {
-        return new Product(
+        return new ProductGetResponseDto(
                 id, categoryId, stockId, name, salePrice, listPrice,
                 imageUrl, productStatus, salesCount, createdAt, updatedAt
         );

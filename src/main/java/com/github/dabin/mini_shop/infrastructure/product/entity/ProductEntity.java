@@ -57,4 +57,16 @@ public class ProductEntity {
     @Comment("수정일")
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+
+    public static ProductEntity of(
+            Long id, Long categoryId, Long stockId, String name,
+            Long salePrice, Long listPrice, String imageUrl, String productStatus,
+            int salesCount, LocalDateTime createdAt, LocalDateTime updatedAt
+    ) {
+        return new ProductEntity(
+                id, categoryId, stockId, name, salePrice, listPrice,
+                imageUrl, productStatus, salesCount, createdAt, updatedAt
+        );
+    }
 }
