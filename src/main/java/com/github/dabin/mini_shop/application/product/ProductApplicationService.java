@@ -6,7 +6,6 @@ import com.github.dabin.mini_shop.api.product.dto.response.GetProductResponseDto
 import com.github.dabin.mini_shop.api.product.mapper.ProductDtoMapper;
 import com.github.dabin.mini_shop.domain.product.model.Product;
 import com.github.dabin.mini_shop.domain.product.repository.ProductRepository;
-import com.github.dabin.mini_shop.infrastructure.product.mapper.ProductEntityMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +18,6 @@ import java.util.List;
 public class ProductApplicationService {
     private final ProductRepository productRepository;
     private final ProductDtoMapper productDtoMapper;
-    private final ProductEntityMapper productEntityMapper;
 
     public List<GetProductResponseDto> findAll() {
         List<Product> products = productRepository.findAll();

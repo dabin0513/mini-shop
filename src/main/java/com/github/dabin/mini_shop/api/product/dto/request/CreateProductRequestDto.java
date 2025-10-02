@@ -1,5 +1,6 @@
 package com.github.dabin.mini_shop.api.product.dto.request;
 
+import com.github.dabin.mini_shop.domain.product.model.ProductStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,14 +17,14 @@ public class CreateProductRequestDto {
     private Long salePrice;
     private Long listPrice;
     private String imageUrl;
-    private String productStatus;
+    private ProductStatus productStatus;
     private int salesCount;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
     public static CreateProductRequestDto of(
             Long categoryId, Long stockId, String name,
-            Long salePrice, Long listPrice, String imageUrl, String productStatus,
+            Long salePrice, Long listPrice, String imageUrl, ProductStatus productStatus,
             int salesCount, LocalDateTime createdAt, LocalDateTime updatedAt
     ) {
         return new CreateProductRequestDto(

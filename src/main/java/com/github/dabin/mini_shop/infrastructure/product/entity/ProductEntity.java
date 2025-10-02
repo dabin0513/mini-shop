@@ -1,5 +1,6 @@
 package com.github.dabin.mini_shop.infrastructure.product.entity;
 
+import com.github.dabin.mini_shop.domain.product.model.ProductStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -43,8 +44,9 @@ public class ProductEntity {
     private String imageUrl;
 
     @Comment("상품 상태")
+    @Enumerated(EnumType.STRING)
     @Column(name = "product_status")
-    private String productStatus;
+    private ProductStatus productStatus;
 
     @Comment("판매량")
     @Column(name = "sales_count")
@@ -61,7 +63,7 @@ public class ProductEntity {
 
     public static ProductEntity of(
             Long id, Long categoryId, Long stockId, String name,
-            Long salePrice, Long listPrice, String imageUrl, String productStatus,
+            Long salePrice, Long listPrice, String imageUrl, ProductStatus productStatus,
             int salesCount, LocalDateTime createdAt, LocalDateTime updatedAt
     ) {
         return new ProductEntity(

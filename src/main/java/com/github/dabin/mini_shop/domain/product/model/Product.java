@@ -17,14 +17,14 @@ public class Product {
     private Long salePrice;
     private Long listPrice;
     private String imageUrl;
-    private String productStatus;
+    private ProductStatus productStatus;
     private int salesCount;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
     public static Product of(
             Long id, Long categoryId, Long stockId, String name,
-            Long salePrice, Long listPrice, String imageUrl, String productStatus,
+            Long salePrice, Long listPrice, String imageUrl, ProductStatus productStatus,
             int salesCount, LocalDateTime createdAt, LocalDateTime updatedAt
     ) {
         return new Product(
