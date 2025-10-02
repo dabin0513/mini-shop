@@ -1,5 +1,6 @@
 package com.github.dabin.mini_shop.api.product.mapper;
 
+import com.github.dabin.mini_shop.api.product.dto.request.ProductCreateRequestDto;
 import com.github.dabin.mini_shop.api.product.dto.response.ProductGetResponseDto;
 import com.github.dabin.mini_shop.domain.product.model.Product;
 import org.springframework.stereotype.Component;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductDtoMapper {
 
-    public ProductGetResponseDto toCreateResponseDto(Product product) {
+    public ProductGetResponseDto toGetResponseDto(Product product) {
         if (product == null) {
             return null;
         }
