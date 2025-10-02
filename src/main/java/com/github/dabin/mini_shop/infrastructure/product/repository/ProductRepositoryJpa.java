@@ -20,4 +20,10 @@ public class ProductRepositoryJpa implements ProductRepository {
         List<ProductEntity> productEntities = productJpaRepository.findAll();
         return productEntities.stream().map(productEntityMapper::toDomain).toList();
     }
+
+    @Override
+    public Product save(Product product) {
+        ProductEntity productEntity = productEntityMapper.toEntity(product);
+        return productEntityMapper.toDomain(productJpaRepository.save(productEntity));
+    }
 }

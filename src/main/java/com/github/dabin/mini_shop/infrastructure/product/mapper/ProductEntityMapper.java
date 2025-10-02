@@ -26,4 +26,24 @@ public class ProductEntityMapper {
                 productEntity.getUpdatedAt()
         );
     }
+
+    public ProductEntity toEntity(Product product) {
+        if (product == null) {
+            return null;
+        }
+
+        return ProductEntity.of(
+                product.getId(),
+                product.getCategoryId(),
+                product.getStockId(),
+                product.getName(),
+                product.getSalePrice(),
+                product.getListPrice(),
+                product.getImageUrl(),
+                product.getProductStatus(),
+                product.getSalesCount(),
+                product.getCreatedAt(),
+                product.getUpdatedAt()
+        );
+    }
 }
