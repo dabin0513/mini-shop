@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductGetResponseDto {
+public class GetProductResponseDto {
     private Long id;
     private Long categoryId;
     private Long stockId;
@@ -22,12 +22,12 @@ public class ProductGetResponseDto {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public static ProductGetResponseDto of(
+    public static GetProductResponseDto of(
             Long id, Long categoryId, Long stockId, String name,
             Long salePrice, Long listPrice, String imageUrl, String productStatus,
             int salesCount, LocalDateTime createdAt, LocalDateTime updatedAt
     ) {
-        return new ProductGetResponseDto(
+        return new GetProductResponseDto(
                 id, categoryId, stockId, name, salePrice, listPrice,
                 imageUrl, productStatus, salesCount, createdAt, updatedAt
         );

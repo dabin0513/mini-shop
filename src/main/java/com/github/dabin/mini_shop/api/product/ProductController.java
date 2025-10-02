@@ -20,7 +20,7 @@ public class ProductController {
 
     @GetMapping("/all")
     @Operation(summary = "상품 목록 조회", description = "상품의 전체 리스트를 조회합니다.")
-    public List<ProductGetResponseDto> getAll() {
+    public List<GetProductResponseDto> getAll() {
         return productApplicationService.findAll();
     }
 }
