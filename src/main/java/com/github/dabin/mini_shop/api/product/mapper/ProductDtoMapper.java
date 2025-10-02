@@ -29,7 +29,7 @@ public class ProductDtoMapper {
         );
     }
 
-    public Product fromCreateRequestDto(CreateProductRequestDto createProductRequestDto) {
+    public Product toDomain(CreateProductRequestDto createProductRequestDto) {
         if (createProductRequestDto == null) {
             return null;
         }

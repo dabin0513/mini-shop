@@ -6,7 +6,6 @@ import com.github.dabin.mini_shop.api.product.dto.response.GetProductResponseDto
 import com.github.dabin.mini_shop.api.product.mapper.ProductDtoMapper;
 import com.github.dabin.mini_shop.domain.product.model.Product;
 import com.github.dabin.mini_shop.domain.product.repository.ProductRepository;
-import com.github.dabin.mini_shop.infrastructure.product.entity.ProductEntity;
 import com.github.dabin.mini_shop.infrastructure.product.mapper.ProductEntityMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -29,7 +28,7 @@ public class ProductApplicationService {
 
     @Transactional
     public CreateProductResponseDto save(CreateProductRequestDto createProductRequestDto) {
-        Product product = productDtoMapper.fromCreateRequestDto(createProductRequestDto);
+        Product product = productDtoMapper.toDomain(createProductRequestDto);
         Product savedProduct = productRepository.save(product);
         return productDtoMapper.toCreateResponseDto(savedProduct);
     }
